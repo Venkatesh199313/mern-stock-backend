@@ -18,7 +18,9 @@ mongoose.connect("mongodb+srv://MiniStockPriceTracker:Ganesh13@cluster0.6cccu1g.
     useUnifiedTopology : true 
 }).then(() => console.log('db connected'));
 
-
+app/get('/', (req,res) => {
+    res.json("Server");
+})
 // create Schema
 const StockSchema = new Schema({
     stockname : String,
